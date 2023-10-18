@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"),
+    local("Lato-Regular"),
+    url(../fonts/lato-regular.woff2) format("woff2"),
+    url(../fonts/lato-regular.woff) format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold"),
+    local("Lato-Bold"),
+    url(../fonts/lato-bold.woff2) format("woff2"),
+    url(../fonts/lato-bold.woff) format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body { 
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: Lato, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+
+  color: #000;
+  background-color: #e5e5e5;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, p, fieldset {
+  margin: 0;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+}

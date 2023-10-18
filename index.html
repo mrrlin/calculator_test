@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Calculator</title>
+</head>
+<body class="body">
+  <header class="header">
+    <h1 class="header__calculator">Test</h1>
+  </header>
+
+  <main class="main">
+    <section class="section calculator">
+      <h2 class="calculator__title">Calculator</h2>
+
+      <form action="index.php" class="calculator__form form">
+        <fieldset class="form__element form__fieldset">
+          <label for="first-number" class="form__element form__label">Введите первое число:</label>
+          <input id="first-number" type="text" class="form__element form__input">
+
+          <label id="math-operation" class="form__element form__math-operation">+</label>
+
+          <label for="second-number" class="form__element form__label">Введите второе число:</label>
+          <input id="second-number" type="text" class="form__element form__input">
+
+          <button id="button-result" class="form__element form__button">равно</button>
+
+          <label id="result" class="form__element form__label"></label>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
