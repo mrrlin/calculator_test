@@ -24,27 +24,35 @@
 
         <form action="#" class="calculator__form form">
           <fieldset class="form__fieldset">
-            <label for="firstNumber" class="form__label">введите первое число:</label>
-            <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число">
+            <fieldset class="form__fieldset-block">
+              <label for="firstNumber" class="form__label">введите первое число:</label>
+              <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число">
+            </fieldset>
             
             <fieldset class="form__fieldset-wrapper">
-              <labet class="form__label form__math-operation" for="plus">&#43;</labet>
-              <input id="plus" type="radio" name="mathOperation" class="form__input form__input-operation" value="+">
-              <labet class="form__label form__math-operation" for="minus">&ndash;</labet>
-              <input id="minus" type="radio" name="mathOperation" class="form__input form__input-operation" value="-">
-              <labet class="form__label form__math-operation" for="multiplication">&#215;</labet>
-              <input id="multiplication" type="radio" name="mathOperation" class="form__input form__input-operation" value="*">
-              <labet class="form__label form__math-operation" for="division">&#247;</labet>
-              <input id="division" type="radio" name="mathOperation" class="form__input form__input-operation" value="/">
+              <input id="plus" type="radio" name="mathOperation" class="form__input-operation" value="+">
+              <label class="form__label form__math-operation" for="plus">&#43;</label>
+            
+              <input id="minus" type="radio" name="mathOperation" class="form__input-operation" value="-">
+              <label class="form__label form__math-operation" for="minus">&ndash;</label>
+
+              <input id="multiplication" type="radio" name="mathOperation" class="form__input-operation" value="*">
+              <label class="form__label form__math-operation" for="multiplication">&#215;</label>
+
+              <input id="division" type="radio" name="mathOperation" class="form__input-operation" value="/">
+              <label class="form__label form__math-operation" for="division">&#247;</label>
             </fieldset>
-            <!-- <label id="mathOperation" class="form__math-operation">+</label> -->
-  
-            <label for="secondNumber" class="form__label">введите второе число:</label>
-            <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число">
+            
+            <fieldset class="form__fieldset-block">
+              <label for="secondNumber" class="form__label">введите второе число:</label>
+              <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число">
+            </fieldset>
   
             <button type="button" id="buttonResult" class="form__button">равно</button>
   
-            <label id="result" class="form__result">2</label>
+            <label id="result" class="form__result">Результат: 2</label>
+
+            <button class="form__clear">Очистить поля</button>
           </fieldset>
         </form>
       </div>
