@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +13,20 @@
 <body class="body">
   <header class="header">
     <div class="container">
-      <h1 class="header__title">Test assignment</h1>
+      <h1 class="header__title" lang="en">Test assignment</h1>
     </div>
   </header>
 
   <main class="main">
     <section class="section calculator">
       <div class="container">
-        <h2 class="calculator__title">Calculator</h2>
+        <h2 class="calculator__title" lang="en">Calculator</h2>
 
         <form action="#" class="calculator__form form">
           <fieldset class="form__fieldset">
             <fieldset class="form__fieldset-block">
               <label for="firstNumber" class="form__label">введите первое число:</label>
-              <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число">
+              <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число" require>
             </fieldset>
             
             <fieldset class="form__fieldset-wrapper">
@@ -45,7 +45,7 @@
             
             <fieldset class="form__fieldset-block">
               <label for="secondNumber" class="form__label">введите второе число:</label>
-              <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число">
+              <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число" require>
             </fieldset>
   
             <button type="button" id="buttonResult" class="form__button">равно</button>

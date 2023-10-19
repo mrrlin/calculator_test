@@ -9,13 +9,9 @@ const result = document.getElementById('result');
 const mathOperations = document.getElementsByName('mathOperation');
 let mathOperationChecked = "";
 
-
-
-// const checked = document.querySelector('input[name="mathOperation"]:checked');
-
 //restricton for enter: only numbers
 numberOfFirstLabel.addEventListener('input', () => {
-  numberOfFirstLabel.value = numberOfFirstLabel.value.replace(/\D/g, '');
+  numberOfFirstLabel.value = numberOfFirstLabel.value.replace(/[^0-9]|-/g, '');
 });
 
 function getResultOfMathOperation(operation) {
@@ -23,27 +19,35 @@ function getResultOfMathOperation(operation) {
   const secondNumber = parseFloat(numberOfSecondLabel.value);
   let resultOfOperation = 0;
 
-  switch(operation) {
-    case '+':
-      resultOfOperation = firstNumber + secondNumber;
-      console.log('+');
-      return resultOfOperation;
-    case '-':
-      resultOfOperation = firstNumber - secondNumber;
-      console.log('-');
-      return resultOfOperation;
-    case '*':
-      resultOfOperation = firstNumber * secondNumber;
-      console.log('*');
-      return resultOfOperation;
-    case '/':
-      resultOfOperation = firstNumber / secondNumber;
-      console.log('/');
-      return resultOfOperation;
+  if (firstNumber && secondNumber) {
+    switch(operation) {
+      case '+':
+        resultOfOperation = firstNumber + secondNumber;
+        return resultOfOperation;
+      case '-':
+        resultOfOperation = firstNumber - secondNumber;
+        return resultOfOperation;
+      case '*':
+        resultOfOperation = firstNumber * secondNumber;
+        return resultOfOperation;
+      case '/':
+        if(secondNumber !== 0) {
+          resultOfOperation = firstNumber / secondNumber;
+        } else {
+          resultOfOperation = 'Мы тут на 0 не делим (:';
+        }
+        return resultOfOperation;
+      default:
+        resultOfOperation = 'Выберите действие';
+        return resultOfOperation;
+    }
+  } else {
+    resultOfOperation = 'Оба поля должны быть заполнены';
+    return resultOfOperation;
   }
 }
 
-buttonResult.addEventListener('click', (e) => {
+buttonResult.addEventListener('click', () => {
   getResultOfMathOperation();
   mathOperations.forEach(mathOperation => {
     if(mathOperation.checked) {
