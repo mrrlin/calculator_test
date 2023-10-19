@@ -22,19 +22,29 @@
       <div class="container">
         <h2 class="calculator__title">Calculator</h2>
 
-        <form action="index.php" class="calculator__form form">
-          <fieldset class="form__element form__fieldset">
-            <label for="first-number" class="form__element form__label">введите первое число:</label>
-            <input id="first-number" type="text" class="form__element form__input" placeholder="1">
+        <form action="#" class="calculator__form form">
+          <fieldset class="form__fieldset">
+            <label for="firstNumber" class="form__label">введите первое число:</label>
+            <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число">
+            
+            <fieldset class="form__fieldset-wrapper">
+              <labet class="form__label form__math-operation" for="plus">&#43;</labet>
+              <input id="plus" type="radio" name="mathOperation" class="form__input form__input-operation" value="+">
+              <labet class="form__label form__math-operation" for="minus">&ndash;</labet>
+              <input id="minus" type="radio" name="mathOperation" class="form__input form__input-operation" value="-">
+              <labet class="form__label form__math-operation" for="multiplication">&#215;</labet>
+              <input id="multiplication" type="radio" name="mathOperation" class="form__input form__input-operation" value="*">
+              <labet class="form__label form__math-operation" for="division">&#247;</labet>
+              <input id="division" type="radio" name="mathOperation" class="form__input form__input-operation" value="/">
+            </fieldset>
+            <!-- <label id="mathOperation" class="form__math-operation">+</label> -->
   
-            <label id="math-operation" class="form__element form__math-operation">+</label>
+            <label for="secondNumber" class="form__label">введите второе число:</label>
+            <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число">
   
-            <label for="second-number" class="form__element form__label">введите второе число:</label>
-            <input id="second-number" type="text" class="form__element form__input" placeholder="1">
+            <button type="button" id="buttonResult" class="form__button">равно</button>
   
-            <button id="button-result" class="form__element form__button">равно</button>
-  
-            <label id="result" class="form__element form__result">2</label>
+            <label id="result" class="form__result">2</label>
           </fieldset>
         </form>
       </div>
