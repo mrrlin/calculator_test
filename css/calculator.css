@@ -40,12 +40,11 @@
 
 .form__label {
   font-variant: small-caps;
-  margin-bottom: 5px;
 }
 
 .form__input {
   width: 100%;
-  height: 35px;
+  height: 40px;
   border: none;
   border-radius: 4px;
   padding: 0 10px;
@@ -119,6 +118,10 @@
   margin-bottom: 15px;
 }
 
+.form__clear {
+  padding: 10px 10px;
+}
+
 @media (max-width: 772px) {
   .calculator__form {
     width: 500px;
@@ -152,7 +155,7 @@
     padding: 20px 10px;
   }
 
-  .form__input {
-    /* width: 100%; */
+  .form__fieldset-wrapper {
+    gap: 25px;
   }
 }

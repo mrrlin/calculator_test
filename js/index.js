@@ -1,13 +1,14 @@
+const form = document.getElementById('form');
+
 const numberOfFirstLabel = document.getElementById('firstNumber');
 const numberOfSecondLabel = document.getElementById('secondNumber');
 
-const labels = document.getElementsByClassName('form__math-operation');
+const mathOperations = document.getElementsByName('mathOperation');
+let mathOperationChecked = "";
 
 const buttonResult = document.getElementById('buttonResult');
 const result = document.getElementById('result');
-
-const mathOperations = document.getElementsByName('mathOperation');
-let mathOperationChecked = "";
+const clearForm = document.getElementById('clear');
 
 //restricton for enter: only numbers
 numberOfFirstLabel.addEventListener('input', () => {
@@ -57,7 +58,6 @@ buttonResult.addEventListener('click', () => {
   });
 
   result.innerHTML = 'Результат: ' + getResultOfMathOperation(mathOperationChecked);
-
-
-  // console.log('sign is ' + mathOperationChecked);
 });
+
+clearForm.addEventListener('click', () => form.reset());
