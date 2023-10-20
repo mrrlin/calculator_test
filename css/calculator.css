@@ -112,10 +112,20 @@
   background-color: #525252;
 }
 
+.form__button:disabled {
+  background-color: #e0e0e0;
+  color: #fff;
+  cursor: default;
+}
+
 .form__result {
   text-align: center;
   font-weight: 900;
   margin-bottom: 15px;
+}
+
+.form__example-result {
+  color: #b6b6b6;
 }
 
 .form__clear {

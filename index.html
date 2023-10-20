@@ -26,7 +26,7 @@
           <fieldset class="form__fieldset">
             <fieldset class="form__fieldset-block">
               <label for="firstNumber" class="form__label">введите первое число:</label>
-              <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число" require>
+              <input id="firstNumber" type="text" class="form__input" placeholder="1" title="Введите первое число" require  maxlength="10">
             </fieldset>
             
             <fieldset class="form__fieldset-wrapper">
@@ -45,12 +45,12 @@
             
             <fieldset class="form__fieldset-block">
               <label for="secondNumber" class="form__label">введите второе число:</label>
-              <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число" require>
+              <input id="secondNumber" type="text" class="form__input" placeholder="1" title="Введите второе число" require maxlength="10">
             </fieldset>
   
             <button type="button" id="buttonResult" class="form__button">равно</button>
   
-            <label id="result" class="form__result">Результат: 2</label>
+            <label id="result" class="form__result">Результат: <span class="form__example-result">2</span></label>
 
             <button id="clear" class="form__clear">Очистить поля</button>
           </fieldset>
